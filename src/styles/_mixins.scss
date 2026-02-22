@@ -1,0 +1,14 @@
+
+
+@mixin center-element {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin icon-element {
+	aspect-ratio: 1 / 1;
+	width: 30px;
+	height: 30px;
+}

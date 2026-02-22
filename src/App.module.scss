@@ -1,0 +1,27 @@
+
+@use './styles/variables' as *;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	min-height: 100vh;
+	flex: 1;
+	background-color: $primary-color;
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+
+		.inner_content {
+			margin: 10px;
+			border: 1px solid black;
+		}
+	}
+}

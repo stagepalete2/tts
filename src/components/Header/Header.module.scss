@@ -1,0 +1,53 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.container {
+    background-color: $primary-color;
+    border-bottom: 1px solid $border-color;
+    height: $header-height;
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0 10px;
+
+		gap: 10px;
+
+		.link_group {
+			display: flex;
+			flex-direction: row;
+			flex-direction: center;
+			align-items: center;
+			gap: 10px;
+
+			button.link {
+				@include center-element;
+	
+				background-color: white;
+				border: 0px;
+	
+				box-sizing: border-box;
+	
+				text-decoration: none;
+	
+				height: 60%;
+	
+				cursor: pointer;
+	
+				&.button {
+					border: 1px solid $border-color;
+					padding: 8px;
+					border-radius: 10px;
+				}
+	
+	
+				img.icon {
+					@include icon-element;
+				}
+			}
+		}
+
+    }
+}
