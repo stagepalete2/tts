@@ -1,0 +1,24 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    padding: 20px;
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        width: 100%;
+
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

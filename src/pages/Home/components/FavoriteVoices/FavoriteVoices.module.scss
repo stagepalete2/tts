@@ -1,0 +1,131 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.container {
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+
+        h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .editBtn {
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 0.8rem;
+            cursor: pointer;
+            &:hover { color: $active-link; }
+        }
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+
+        .voiceItem {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            border-radius: 12px;
+            transition: background 0.2s ease;
+            border: 1px solid transparent;
+
+            &:hover {
+                background: #f9f9f9;
+                border-color: #eee;
+
+                .useBtn {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .avatar {
+                width: 36px;
+                height: 36px;
+                background: #f0f4ff;
+                color: $active-link;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                font-weight: 700;
+                font-size: 0.9rem;
+                flex-shrink: 0;
+            }
+
+            .info {
+                flex-grow: 1;
+                margin-left: 12px;
+
+                .name {
+                    margin: 0;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    color: #333;
+                }
+
+                .meta {
+                    margin: 0;
+                    font-size: 0.75rem;
+                    color: #999;
+                }
+            }
+
+            .useBtn {
+                background: #f0f0f0;
+                border: none;
+                width: 28px;
+                height: 28px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                color: #666;
+                opacity: 0; // Прячем кнопку, пока не навели на карточку
+                transform: translateX(-5px);
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background: $active-link;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .allVoicesBtn {
+        width: 100%;
+        background: #f9f9f9;
+        border: 1px dashed #ddd;
+        padding: 10px;
+        border-radius: 10px;
+        color: #777;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: $active-link;
+            color: $active-link;
+            background: white;
+        }
+    }
+}

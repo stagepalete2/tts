@@ -1,0 +1,43 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.container {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 200px;
+	height: 200px;
+
+	cursor: pointer;
+
+
+	.thumbnail {
+		@include center-element;
+		background-color: #F4F4F5;
+		border-radius: 15px;
+		width: 100%;
+		height: 100%;
+
+		img.icon {
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+	&:hover {
+
+		.thumbnail {
+			background-color: #E5E5E8;
+
+			img.icon {
+				width: 110px;
+				height: 110px;
+
+				transition: .2s;
+			}
+		}
+	}
+}
