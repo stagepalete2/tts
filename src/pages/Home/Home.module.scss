@@ -1,16 +1,8 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .container {
-	display: flex;
-	flex-direction: column;
-	padding: 28px 32px;
-	width: 100%;
-	max-width: 1200px;
-	align-self: center;
-
-	@media (max-width: 768px) {
-		padding: 20px 16px;
-	}
+	@include page-container;
 }
 
 .welcome_banner {

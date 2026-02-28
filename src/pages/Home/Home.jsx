@@ -1,12 +1,14 @@
 import styles from './Home.module.scss'
 
+import Group from '@/components/Group/Group'
 import FavoriteVoices from './components/FavoriteVoices/FavoriteVoices'
-import Group from './components/Group/Group'
 import History from './components/History/History'
 import CreateProject from './components/Project/Create/CreateProject'
 import Project from './components/Project/Project'
 import QuickActions from './components/QuickActions/QuickActions.jsx'
 import UsageStat from './components/UsageStat/UsageStat'
+
+import useDocMeta from '@/hooks/useDocMeta'
 
 const mockHistory = [
 	{
@@ -33,6 +35,8 @@ const mockHistory = [
 ];
 
 const Home = () => {
+	useDocMeta('Home', '/favicons/logo.png')
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.welcome_banner}>
