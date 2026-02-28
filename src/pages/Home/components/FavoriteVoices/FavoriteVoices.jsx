@@ -8,7 +8,7 @@ const FavoriteVoices = () => {
     ];
 
     return (
-        <div className={styles.container}>
+        <div className={styles.card}>
             <div className={styles.header}>
                 <h3>Favourite voice</h3>
                 <button className={styles.editBtn}>Edit</button>

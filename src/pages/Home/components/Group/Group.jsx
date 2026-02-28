@@ -7,7 +7,7 @@ const Group = ({children, label}) => {
 			<p className={styles.group_name}>
 				{label}
 			</p>
-			<div className={styles.content}>
+			<div className={[styles.content]}>
 				{children}
 			</div>
 		</div>

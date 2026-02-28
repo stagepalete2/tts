@@ -4,6 +4,7 @@ import styles from './Home.module.scss'
 import FavoriteVoices from './components/FavoriteVoices/FavoriteVoices'
 import Group from './components/Group/Group'
 import History from './components/History/History'
+import CreateProject from './components/Project/Create/CreateProject'
 import Project from './components/Project/Project'
 import UsageStat from './components/UsageStat/UsageStat'
 
@@ -40,7 +41,7 @@ const Home = () => {
 				<Project />
 				<Project />
 				<Project />
-				<Project />
+				<CreateProject />
 			</Group>
 
 			<div className={styles.content}>
