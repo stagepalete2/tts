@@ -1,0 +1,26 @@
+.container {
+	width: 100%;
+}
+
+.grid_view {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+.list_view {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	// В list-view карточки растягиваются на всю ширину
+	> * {
+		width: 100% !important;
+
+		// Меняем thumbnail на горизонтальный вид
+		:global(.thumbnail) {
+			height: 80px;
+		}
+	}
+}
