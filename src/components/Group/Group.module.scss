@@ -1,0 +1,29 @@
+@use '../../styles/variables' as *;
+
+.container {
+	margin-bottom: 32px;
+
+	.group_name {
+		color: #111;
+		font-size: 0.8rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.07em;
+		margin: 0 0 12px;
+		padding: 0;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 12px;
+		width: 100%;
+		flex-wrap: wrap;
+
+		&.column {
+			flex-direction: column;
+		}
+	}
+}
