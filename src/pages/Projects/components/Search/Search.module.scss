@@ -1,0 +1,144 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.search_row {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.search_wrap {
+	position: relative;
+	flex: 1;
+	display: flex;
+	align-items: center;
+
+	.search_icon {
+		position: absolute;
+		left: 13px;
+		color: #AAA;
+		pointer-events: none;
+		flex-shrink: 0;
+	}
+
+	.input {
+		width: 100%;
+		height: 40px;
+		padding: 0 36px 0 38px;
+		border: 1px solid #E5E5E7;
+		border-radius: 10px;
+		background: #fff;
+		font-size: 0.875rem;
+		color: #111;
+		outline: none;
+		transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+		&::placeholder {
+			color: #ABABAB;
+		}
+
+		&:focus {
+			border-color: #111;
+			box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+		}
+	}
+
+	.clear_btn {
+		position: absolute;
+		right: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: none;
+		background: #E5E5E7;
+		color: #666;
+		cursor: pointer;
+		transition: all 0.15s ease;
+
+		&:hover {
+			background: #CCC;
+			color: #111;
+		}
+	}
+}
+
+.view_toggle {
+	display: flex;
+	border: 1px solid #E5E5E7;
+	border-radius: 10px;
+	overflow: hidden;
+	flex-shrink: 0;
+
+	.view_btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border: none;
+		background: #fff;
+		color: #AAA;
+		cursor: pointer;
+		transition: all 0.15s ease;
+
+		& + .view_btn {
+			border-left: 1px solid #E5E5E7;
+		}
+
+		&:hover {
+			color: #333;
+			background: #F5F5F5;
+		}
+
+		&.active {
+			background: #111;
+			color: white;
+		}
+	}
+}
+
+.filters {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+
+	.filter_chip {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		height: 30px;
+		padding: 0 12px;
+		border: 1px solid #E5E5E7;
+		border-radius: 99px;
+		background: white;
+		font-size: 0.8rem;
+		font-weight: 500;
+		color: #666;
+		cursor: pointer;
+		transition: all 0.15s ease;
+		white-space: nowrap;
+
+		svg {
+			flex-shrink: 0;
+		}
+
+		&:hover {
+			border-color: #999;
+			color: #111;
+		}
+
+		&.active {
+			background: #111;
+			border-color: #111;
+			color: white;
+		}
+	}
+}
