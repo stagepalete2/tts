@@ -2,52 +2,74 @@
 @use '../../styles/mixins' as *;
 
 .container {
-    background-color: $primary-color;
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid $border-color;
     height: $header-height;
+    position: sticky;
+    top: 0;
+    z-index: 50;
 
     .navigation {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        margin: 0 10px;
+        padding: 0 20px;
+        gap: 10px;
 
-		gap: 10px;
+        .link_group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
 
-		.link_group {
-			display: flex;
-			flex-direction: row;
-			flex-direction: center;
-			align-items: center;
-			gap: 10px;
+            .title {
+                font-size: 0.95rem;
+                font-weight: 600;
+                color: #111;
+                padding: 0 4px;
+            }
 
-			button.link {
-				@include center-element;
-	
-				background-color: white;
-				border: 0px;
-	
-				box-sizing: border-box;
-	
-				text-decoration: none;
-	
-				height: 60%;
-	
-				cursor: pointer;
-	
-				&.button {
-					border: 1px solid $border-color;
-					padding: 8px;
-					border-radius: 10px;
-				}
-	
-	
-				img.icon {
-					@include icon-element;
-				}
-			}
-		}
+            button.link {
+                @include center-element;
+                background-color: transparent;
+                border: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+                height: 34px;
+                cursor: pointer;
+                border-radius: 8px;
+                padding: 0 10px;
+                font-size: 0.85rem;
+                color: #555;
+                transition: all 0.15s ease;
 
+                &:hover {
+                    background-color: rgba(0,0,0,0.05);
+                    color: #111;
+                }
+
+                &.button {
+                    border: 1px solid $border-color;
+                    padding: 6px 14px;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    color: #333;
+
+                    &:hover {
+                        background-color: #111;
+                        color: white;
+                        border-color: #111;
+                    }
+                }
+
+                img.icon {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
     }
 }
